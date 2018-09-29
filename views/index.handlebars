@@ -4,7 +4,7 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>Blue Bell</h2>
-        <form class="clearfix mb-4" action="POST">
+        <form class="clearfix mb-4" >
           <div class="form-group">
             <label for="example-text">Current Location</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Location">
@@ -16,18 +16,19 @@
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
         <h3>Recently Reported:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        <div class="some-pannel">
+    <div class="map-wrapper">
+        <div id="map" style="width:100%;height:100%;"></div>
+    </div>
+</div>
+        {{!-- <div id="map"></div> --}}
+        
+        
       </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+{{!-- <script src="/js/index.js"></script> --}}
+<script src="/js/location.js"></script>
