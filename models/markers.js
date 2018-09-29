@@ -3,38 +3,32 @@ module.exports = function (sequelize, DataTypes) {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            
             primaryKey: true
         },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-            
-        },
-        address: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            
+
         },
         lat: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-           
+            allowNull: true,
+
         },
         lng: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-           
+            allowNull: true,
+
         },
         type: {
             type: DataTypes.TEXT,
             allowNull: false,
-           
+
         }
     });
-    
+
     return Post;
-    };
+};
 
 //     Post.associate = function (models) {
 //         // We're saying that a Post should belong to an Author

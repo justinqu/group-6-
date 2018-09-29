@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS markersdb;
 CREATE DATABASE markersdb;
-use database markersdb;
-CREATE TABLE markers(
+USE database markersdb;
+CREATE TABLE markers
 --   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 --   name VARCHAR(60) NOT NULL ,
 --   address VARCHAR( 80 ) NOT NULL ,
