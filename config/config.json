@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "P3pperm!nt",
+    "database": "bluebelldb",
     "host": "localhost",
     "dialect": "mysql"
   },
