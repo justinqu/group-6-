@@ -12,6 +12,7 @@ function onGeolocateSuccess(coordinates) {
     const { latitude, longitude } = coordinates.coords;
     console.log('Found coordinates: ', latitude, longitude);
     initMap(latitude, longitude);
+
 }
 
 function initMap(lat, lng) {
@@ -37,3 +38,4 @@ function onGeolocateError(error) {
     }
 }
 geolocate()
+

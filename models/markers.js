@@ -1,22 +1,22 @@
 module.exports = function (sequelize, DataTypes) {
     var Post = sequelize.define("markers", {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true
-        },
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     primaryKey: true
+        // },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
 
         },
         lat: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(9,7),
             allowNull: true,
 
         },
         lng: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(9,7),
             allowNull: true,
 
         },

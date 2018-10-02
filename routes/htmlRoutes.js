@@ -3,18 +3,18 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.markers.findAll({}).then(function(dbExamples) {
+    db.markers.findAll({}).then(function(dbMarkers) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        examples: dbMarkers
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
+  app.get("/markers/:id", function(req, res) {
     db.markers.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
+      res.render("markers", {
         example: dbExample
       });
     });
