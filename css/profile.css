@@ -1,0 +1,73 @@
+#iizqwo{
+    background-color:#29b6f6;
+  }
+  #ifog6v{
+    background-color:#29b6f6;
+  }
+  #iejt1m{
+    background-color:#29b6f6;
+  }
+  #i96b7u{
+    background-color:#29b6f6;
+  }
+  #ixuekw{
+    background-color:#29b6f6;
+  }
+  #ij17cl{
+    background-color:#29b6f6;
+  }
+  #iieyql{
+    background-color:#29b6f6;
+  }
+  .row, .section{
+    width:100%;
+  }
+  .row{
+    display:table;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+  }
+ 
+  
+  .input-field [type="checkbox"] + label, .input-field [type="radio"]:checked + label, .input-field [type="radio"]:not(:checked) + label{
+    pointer-events:auto;
+  }
+  
+  
+  .icon-block .material-icons{
+    font-size:inherit;
+  }
+ 
+  .col.m6{
+    background-color:#29b6f6;
+  }
+  .c4056{
+    background-color:#29b6f6;
+  }
+  @media only screen and (max-width: 992px){
+    .parallax-container .section{
+      position:absolute;
+      top:40%;
+    }
+    #index-banner .section{
+      top:10%;
+    }
+    .parallax-container .section{
+      position:absolute;
+      top:40%;
+    }
+    #index-banner .section{
+      top:10%;
+    }
+  }
+  @media only screen and (max-width: 600px){
+    #index-banner .section{
+      top:0px;
+    }
+    #index-banner .section{
+      top:0px;
+    }
+  }
+  

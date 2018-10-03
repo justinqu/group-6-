@@ -1,0 +1,65 @@
+.row,.section{
+    width:100%;
+  }
+  body{
+    background-image:url("https://images.unsplash.com/photo-1534443981854-93b64d25a9da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae21d5417942f7ef903b0d8e63022b70&w=1000&q=80");
+    background-size: cover;
+}
+  .row{
+    display:table;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+  }
+
+  
+  .button-collapse{
+    color:rgb(38, 166, 154);
+  }
+  
+  .input-field [type="checkbox"] + label, .input-field [type="radio"]:checked + label, .input-field [type="radio"]:not(:checked) + label{
+    pointer-events:auto;
+  }
+
+  
+  .icon-block .material-icons{
+    font-size:inherit;
+  }
+  
+  .col:empty{
+    display:table-cell;
+    height:75px;
+  }
+  .cj{
+    height:450px;
+    width: 100%;
+  }
+  .center-box{
+    margin-top:0px;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-left:auto;
+    max-width:500px;
+  }
+  .center-box:empty{
+    height:75px;
+  }
+  .btn, .btn-large, .btn-small, .btn-flat{
+      width: 100%;
+  }
+  @media only screen and (max-width: 992px){
+    .parallax-container .section{
+      position:absolute;
+      top:40%;
+    }
+    #index-banner .section{
+      top:10%;
+    }
+  }
+  @media only screen and (max-width: 600px){
+    #index-banner .section{
+      top:0px;
+    }
+  }
+  
