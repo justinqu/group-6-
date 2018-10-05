@@ -5,8 +5,7 @@ var $exampleList = $("#example-list");
 var currentCoordinates;
 
 function getLocation(coords){
-  console.log(coords)
-  currentCoordinates = {
+    currentCoordinates = {
     lat: coords.coords.latitude,
     lng: coords.coords.longitude
   }
