@@ -8,6 +8,11 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/text", (req,res) => {
+    res.send(req.body);
+    console.log(req.body);
+    });
+
   // Create a new example
   app.post("/api/markers", function (req, res) {
     db.markers.create(req.body).then(function (dbmarkers) {

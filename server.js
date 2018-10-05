@@ -2,6 +2,9 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+var ejs = require ("ejs");
+var Nexmo = require ("nexmo");
+var socketio = require ('socket.io');;
 
 var db = require("./models");
 

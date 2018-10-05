@@ -1,7 +1,8 @@
 {
   "development": {
+    "port": "8889",
     "username": "root",
-    "password": "P3pperm!nt",
+    "password": "root",
     "database": "bluebelldb",
     "host": "localhost",
     "dialect": "mysql"
