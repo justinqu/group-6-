@@ -6,7 +6,7 @@ module.exports = function(app) {
     db.markers.findAll({}).then(function(dbMarkers) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbMarkers
+        examples: JSON.stringify(dbMarkers)
       });
     });
   });

@@ -2,29 +2,39 @@
 const $geolocateButton = document.getElementById('submit');
 $geolocateButton.addEventListener('click', geolocate);
 
+// const markers = JSON.parse(document.currentScript.getAttribute('markers'));
+
 function geolocate() {
     if (window.navigator && window.navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
     }
 
 }
+
 function onGeolocateSuccess(coordinates) {
     const { latitude, longitude } = coordinates.coords;
     console.log('Found coordinates: ', latitude, longitude);
     initMap(latitude, longitude);
-
 }
 
 function initMap(lat, lng) {
-   
+
     const $map = document.getElementById('map');
-    const position = { lat:parseFloat(lat), lng:parseFloat(lng) };
-    const map = new google.maps.Map($map, {
-      center: position,
-      zoom: 12,
+    const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
+    map = new google.maps.Map($map, {
+        center: position,
+        zoom: 12,
     });
-    const marker = new google.maps.Marker({position:position, map: map})
+    const markers = new google.maps.Marker({ position: position, map: map })
+    getMarkers(location);
 }
+function getMarkers(locations){
+       for (i = 0; i < coordinates.length; i++) {  
+             markers = new google.maps.Marker({
+          position: new google.maps.LatLng(coordinates),
+          map: map
+        })
+   }}
 
 function onGeolocateError(error) {
     console.warn(error.code, error.message);
@@ -38,4 +48,3 @@ function onGeolocateError(error) {
     }
 }
 geolocate()
-
