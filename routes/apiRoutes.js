@@ -8,10 +8,23 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/text", (req,res) => {
-    res.send(req.body);
-    console.log(req.body);
-    });
+  app.post("/text", (req, res) => {
+    //res.send(req.body);
+    //console.log(req.body);
+    const number = req.body.number;
+    const text = req.body.text;
+    
+    nexmo.message.sendSms(
+      '19493407484', number, text, { type: 'unicode' },
+      (err, responseData) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.dir(responseData);
+        }
+      }
+    );
+  });
 
   // Create a new example
   app.post("/api/markers", function (req, res) {
