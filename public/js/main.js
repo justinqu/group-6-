@@ -1,20 +1,26 @@
-var numberInput = document.getElementById("number"),
-    textInput = document.getElementById("msg"),
-    contactInput = document.getElementById("contact"),
-    button = document.getElementsByClassName("button");
+const numberInput = document.getElementById('number'),
+    textInput = document.getElementById('msg'),
+    button = document.getElementById('button'),
+    response = document.querySelector('.response');
 
-    $( "button" ).on( "click", send );
+    $( ".button" ).on( "click", send);
 
 function send() {
-    var number = numberInput.value.replace(/\D/g, "");
-    var text = textInput.value;
+    const number = numberInput.value.replace(/\D/g, '');
+    const text = textInput.value;
 
-    fetch("/text", {
-        method: "post",
+    fetch('/text', {
+        method: 'post',
         headers: {
-            "Content-type": "application/json"
+            'Content-type': 'application/json'
         },
-        body: JSON.stringify({number: number, text: text})
+        body: JSON.stringify({ number: number, text: text })
     })
-}
+        .then(function (res) {
+            console.log(res);
+        })
 
+        .catch(function (err) {
+            console.log(err);
+        });
+    }

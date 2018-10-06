@@ -6,6 +6,11 @@ var ejs = require ("ejs");
 var Nexmo = require ("nexmo");
 var socketio = require ('socket.io');;
 
+const nexmo = new Nexmo({
+  apiKey:"e35c3a92",
+  apiSecret: "1bSR8y9vd9Hu1Jv6"
+}, { debug: true});
+
 var db = require("./models");
 
 var app = express();
