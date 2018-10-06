@@ -23,7 +23,7 @@ function initMap(lat, lng) {
 
     const $map = document.getElementById('map');
     const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
-    map = new google.maps.Map($map, {
+    var map = new google.maps.Map($map, {
         center: position,
         zoom: 12,
     });
