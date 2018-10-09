@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 var exphbs = require("express-handlebars");
 var ejs = require ("ejs");
 var Nexmo = require ("nexmo");
@@ -16,14 +17,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+app.engine('views', path.resolve(__dirname, './views'));
+app.set('view engine', 'ejs');
+
 
 // Routes
 require("./routes/apiRoutes")(app);
