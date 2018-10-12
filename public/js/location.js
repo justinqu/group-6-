@@ -1,4 +1,5 @@
 
+window.onload=function(){
 const $geolocateButton = document.getElementById('submit');
 $geolocateButton.addEventListener('click', geolocate);
 
@@ -28,7 +29,7 @@ function initMap(lat, lng) {
     const markers = new google.maps.Marker({ position: position, map: map })
     getMarkers(location);
 }
-function getMarkers(locations){
+function getMarkers(coordinates){
        for (i = 0; i < coordinates.length; i++) {  
              markers = new google.maps.Marker({
           position: new google.maps.LatLng(coordinates),
@@ -48,3 +49,4 @@ function onGeolocateError(error) {
     }
 }
 geolocate()
+}
