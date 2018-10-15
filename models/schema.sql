@@ -9,3 +9,4 @@ CREATE TABLE markers
 --   lng FLOAT( 10, 6 ) NOT NULL ,
 --   type VARCHAR( 30 ) NOT NULL
 -- ) ENGINE = MYISAM ;
+

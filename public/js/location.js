@@ -1,8 +1,10 @@
+window.onload=function(){
+
 
 window.onload=function(){
 const $geolocateButton = document.getElementById('submit');
 $geolocateButton.addEventListener('click', geolocate);
-
+}
 // const markers = JSON.parse(document.currentScript.getAttribute('markers'));
 
 function geolocate() {
@@ -22,7 +24,7 @@ function initMap(lat, lng) {
 
     const $map = document.getElementById('map');
     const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
-    map = new google.maps.Map($map, {
+    var map = new google.maps.Map($map, {
         center: position,
         zoom: 12,
     });
