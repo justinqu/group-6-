@@ -1,6 +1,7 @@
 window.onload=function(){
 
 
+window.onload=function(){
 const $geolocateButton = document.getElementById('submit');
 $geolocateButton.addEventListener('click', geolocate);
 }
@@ -50,3 +51,4 @@ function onGeolocateError(error) {
     }
 }
 geolocate()
+}
